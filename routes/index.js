@@ -1,6 +1,12 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 
-router.use('/contacts', require('./contacts'));
+const studentRoute = require('../controllers/contacts.js');
+
+
+router.get('/contacts', studentRoute.getData);
+
+router.get('/contacts/:id',studentRoute.getData_Single);
+
+
 
 module.exports = router;
