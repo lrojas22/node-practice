@@ -1,0 +1,24 @@
+[
+    {
+    "firstName": "Luis",
+    "lastName": "Rojas",
+    "email": "lrojas22@gmail.com",
+    "favoriteColor": "green",
+    "birthday": "19/07/1984" 
+},
+
+{
+    "firstName": "Sandra",
+    "lastName": "Ramírez",
+    "email": "sramirez@gmail.com",
+    "favoriteColor": "blue",
+    "birthday": "10/05/1990"
+},
+{
+    "firstName": "Carlos",
+    "lasName": "Mendoza",
+    "email": "cmendoza@gmail.com",
+    "favoriteColor": "red",
+    "birthday": "23/11/1987"
+}
+]
