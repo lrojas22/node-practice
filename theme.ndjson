@@ -1,0 +1,38 @@
+[
+    {
+      "themeName": "Modern Minimal",
+      "fontSize": 14,
+      "fontFamily": "Arial, sans-serif",
+      "inspiration": "Inspired by minimalist design",
+      "colors": ["#ffffff", "#000000", "#f0f0f0"]
+    },
+    {
+      "themeName": "Dark Mode",
+      "fontSize": 16,
+      "fontFamily": "Courier New, monospace",
+      "inspiration": "A theme designed for night use",
+      "colors": ["#000000", "#333333", "#ffffff"]
+    },
+    {
+      "themeName": "Vintage",
+      "fontSize": 18,
+      "fontFamily": "Times New Roman, serif",
+      "inspiration": "Inspired by classic designs from the 80s",
+      "colors": ["#d7c7a3", "#8b4c39", "#f4f0e1"]
+    },
+    {
+      "themeName": "Neon Lights",
+      "fontSize": 12,
+      "fontFamily": "Verdana, Geneva, sans-serif",
+      "inspiration": "Inspired by neon signs and vibrant colors",
+      "colors": ["#ff00ff", "#00ff00", "#ffcc00"]
+    },
+    {
+      "themeName": "Ocean Breeze",
+      "fontSize": 16,
+      "fontFamily": "Tahoma, Geneva, sans-serif",
+      "inspiration": "Inspired by the calming colors of the ocean",
+      "colors": ["#006f7a", "#80c4d9", "#ffffff"]
+    }
+  ]
+  

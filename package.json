@@ -7,7 +7,7 @@
     "start": "node app.js",
     "start-prod": "node app.js",
     "swagger-autogen": "node swagger.js"
-  },  
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

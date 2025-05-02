@@ -1,8 +1,8 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getUsers = async (req, res, next) => {
-  const result = await mongodb.getDb().db('Learning').collection('users').find();
+const getThemes = async (req, res, next) => {
+  const result = await mongodb.getDb().db('Learning').collection('themes').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
@@ -18,7 +18,7 @@ const getUserById = async (req, res, next) => {
   });
 };*/
 
-const getUserById = async (req, res, next) => {
+const getThemeById = async (req, res, next) => {
   const id = req.params.id;
 
   if (!ObjectId.isValid(id)) {
@@ -26,7 +26,7 @@ const getUserById = async (req, res, next) => {
   }
 
   const userId = new ObjectId(id);
-  const result = await mongodb.getDb().db('Learning').collection('users').find({ _id: userId });
+  const result = await mongodb.getDb().db('Learning').collection('themes').find({ _id: userId });
 
   result.toArray().then((lists) => {
     if (!lists.length) {
@@ -40,12 +40,15 @@ const getUserById = async (req, res, next) => {
 };
 
 
-const createUser = async(req, res) => {
-  const user = {
-   user: req.body.user,
-   password:req.body.password
+const createTheme = async(req, res) => {
+  const theme = {
+    themeName : req.body.themeName,
+    fontSize : req.body.fonstSize,
+    fontFamily : req.body.fontFamily,
+    inspiration : req.body.inspiration,
+    colors : req.body.colors
   };
-  const response =  await mongodb.getDb().db('Learning').collection('users').insertOne(user);
+  const response =  await mongodb.getDb().db('Learning').collection('themes').insertOne(theme);
   if(response.acknowledged) {
     res.status(201).json(response);
     }else{
@@ -55,13 +58,16 @@ const createUser = async(req, res) => {
 };
 
 
-const updateUser = async(req,res) => {
+const updateTheme = async(req,res) => {
   const userId = new ObjectId(req.params.id);
-  const user = {
-    user: req.body.user,
-   password:req.body.password
+  const theme = {
+    themeName : req.body.themeName,
+    fontSize : req.body.fonstSize,
+    fontFamily : req.body.fontFamily,
+    inspiration : req.body.inspiration,
+    colors : req.body.colors
   };
-  const response = await mongodb.getDb().db('Learning').collection('users').replaceOne({_id:userId},user);
+  const response = await mongodb.getDb().db('Learning').collection('themes').replaceOne({_id:userId},theme);
   console.log(response);
    if (response.modifiedCount > 0) {
     res.status(200).send();
@@ -70,9 +76,9 @@ const updateUser = async(req,res) => {
    }
 };
 
-const deleteUser = async(req,res) => {
+const deleteTheme = async(req,res) => {
   const userId = new ObjectId(req.params.id);
-  const response = await mongodb.getDb().db('Learning').collection('users').deleteOne({ _id: userId });
+  const response = await mongodb.getDb().db('Learning').collection('themes').deleteOne({ _id: userId });
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();
@@ -82,4 +88,4 @@ const deleteUser = async(req,res) => {
 };
 
 
-module.exports = { getUsers, getUserById, createUser,updateUser,deleteUser};
+module.exports = { getThemes, getThemeById, createTheme,updateTheme,deleteTheme};

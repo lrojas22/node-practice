@@ -3,7 +3,8 @@ const bodyParser = require('body-parser');
 var cors = require('cors');
 const app = express();
 const mongodb = require('./db/connect');
-const luisRoute = require('./routes/users.js')
+const userRoute = require('./routes/users.js')
+const themeRoute = require('./routes/theme.js')
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
@@ -15,7 +16,9 @@ app.use(cors());
 
 app.use(bodyParser.json())
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.use('/', luisRoute);
+
+app.use('/', userRoute);
+app.use('/', themeRoute);
 
 
 
