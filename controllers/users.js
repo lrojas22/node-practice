@@ -42,33 +42,68 @@ const getUserById = async (req, res, next) => {
 
 const createUser = async(req, res) => {
   const user = {
-   user: req.body.user,
-   password:req.body.password
-  };
-  const response =  await mongodb.getDb().db('Learning').collection('users').insertOne(user);
+    username: req.body.username,
+    password: req.body.password,
+    displayName: req.body.displayName,
+    email: req.body.email,
+    phoneNumber: req.body.phoneNumber,
+    currentLocation: req.body.currentLocation,
+    openToNewOpportunities: req.body.openToNewOpportunities,
+    profileIsPublic: req.body.profileIsPublic,
+    theme_name: req.body.theme_name,
+    profile: {
+      experience: req.body.profile?.experience || [],
+      education: req.body.profile?.education || [],
+      projects: req.body.profile?.projects || [],
+      skills: req.body.profile?.skills || [],
+      references: req.body.profile?.references || []
+    }};
+  
+  try{  
+    const response =  await mongodb.getDb().db('Learning').collection('users').insertOne(user);
   if(response.acknowledged) {
     res.status(201).json(response);
     }else{
     res.status(500).json(response.error || 'Some error ocurred while creating the contact')
   }
-
+  }catch (error){
+    res.status(500).json(response.error || 'Unexpected error')
+  }
 };
 
 
 const updateUser = async(req,res) => {
   const userId = new ObjectId(req.params.id);
   const user = {
-    user: req.body.user,
-   password:req.body.password
+    username: req.body.username,
+    password: req.body.password,
+    displayName: req.body.displayName,
+    email: req.body.email,
+    phoneNumber: req.body.phoneNumber,
+    currentLocation: req.body.currentLocation,
+    openToNewOpportunities: req.body.openToNewOpportunities,
+    profileIsPublic: req.body.profileIsPublic,
+    theme_name: req.body.theme_name,
+    profile: {
+      experience: req.body.profile?.experience || [],
+      education: req.body.profile?.education || [],
+      projects: req.body.profile?.projects || [],
+      skills: req.body.profile?.skills || [],
+      references: req.body.profile?.references || []
+    }};
+
+  try{  
+    const response = await mongodb.getDb().db('Learning').collection('users').replaceOne({_id:userId},user);
+    console.log(response);
+      if (response.modifiedCount > 0) {
+        res.status(200).send();
+      }else{
+        res.status(500).json(response.error || 'Some error occurred while updating the contact.');
+      }
+  }catch(error){
+    res.status(500).json(response.error || 'Unexpected error');
+      }
   };
-  const response = await mongodb.getDb().db('Learning').collection('users').replaceOne({_id:userId},user);
-  console.log(response);
-   if (response.modifiedCount > 0) {
-    res.status(200).send();
-   }else{
-    res.status(500).json(response.error || 'Some error occurred while updating the contact.');
-   }
-};
 
 const deleteUser = async(req,res) => {
   const userId = new ObjectId(req.params.id);

@@ -5,10 +5,10 @@
     "description": "Temple API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "node-practice-6a1p.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/users": {
@@ -32,10 +32,34 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
+                "username": {
                   "example": "any"
                 },
                 "password": {
+                  "example": "any"
+                },
+                "displayName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "phoneNumber": {
+                  "example": "any"
+                },
+                "currentLocation": {
+                  "example": "any"
+                },
+                "openToNewOpportunities": {
+                  "example": "any"
+                },
+                "profileIsPublic": {
+                  "example": "any"
+                },
+                "theme_name": {
+                  "example": "any"
+                },
+                "profile": {
                   "example": "any"
                 }
               }
@@ -96,10 +120,34 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
+                "username": {
                   "example": "any"
                 },
                 "password": {
+                  "example": "any"
+                },
+                "displayName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "phoneNumber": {
+                  "example": "any"
+                },
+                "currentLocation": {
+                  "example": "any"
+                },
+                "openToNewOpportunities": {
+                  "example": "any"
+                },
+                "profileIsPublic": {
+                  "example": "any"
+                },
+                "theme_name": {
+                  "example": "any"
+                },
+                "profile": {
                   "example": "any"
                 }
               }

@@ -1,27 +1,92 @@
 [
-    {
-      "user": "user1",
-      "password": "123456"
-    },
-    {
-      "user": "user2",
-      "password": "123456"
-    },
-    {
-      "user": "user3",
-      "password": "123456"
-    },
-    {
-      "user": "user4",
-      "password": "123456"
-    },
-    {
-      "user": "user5",
-      "password": "123456"
-    },
-    {
-      "user": "user6",
-      "password": "123456"
+  {
+    "username": "lrojas",
+    "password": "pass123",
+    "displayName": "Luis Rojas",
+    "email": "lrojas@example.com",
+    "phoneNumber": "+56912345678",
+    "currentLocation": "Santiago, Chile",
+    "openToNewOpportunities": true,
+    "profileIsPublic": true,
+    "theme_name": "dark-mode",
+    "profile": {
+      "experience": [{ "title": "Dev", "company": "TechCo", "years": 2 }],
+      "education": [{ "degree": "BSc CS", "institution": "University of Chile" }],
+      "projects": [{ "name": "API Rest", "stack": ["Node.js", "MongoDB"] }],
+      "skills": ["JavaScript", "MongoDB", "Node.js"],
+      "references": [{ "name": "Carlos", "contact": "carlos@example.com" }]
     }
-  ]
-  
+  },
+  {
+    "username": "mjane",
+    "password": "secure789",
+    "displayName": "Mary Jane",
+    "email": "mjane@example.com",
+    "phoneNumber": "+15551234567",
+    "currentLocation": "New York, USA",
+    "openToNewOpportunities": false,
+    "profileIsPublic": false,
+    "theme_name": "light-mode",
+    "profile": {
+      "experience": [{ "title": "Designer", "company": "Creative Inc", "years": 4 }],
+      "education": [{ "degree": "Design", "institution": "NYU" }],
+      "projects": [{ "name": "UX Redesign", "stack": ["Figma", "HTML"] }],
+      "skills": ["Figma", "CSS", "UX"],
+      "references": [{ "name": "Ana", "contact": "ana@example.com" }]
+    }
+  },
+  {
+    "username": "jsmith",
+    "password": "mypassword",
+    "displayName": "John Smith",
+    "email": "jsmith@example.com",
+    "phoneNumber": "+442012345678",
+    "currentLocation": "London, UK",
+    "openToNewOpportunities": true,
+    "profileIsPublic": true,
+    "theme_name": "blue-ocean",
+    "profile": {
+      "experience": [{ "title": "QA Tester", "company": "TestCorp", "years": 3 }],
+      "education": [{ "degree": "Software Eng", "institution": "UCL" }],
+      "projects": [{ "name": "Testing Automation", "stack": ["Selenium", "Java"] }],
+      "skills": ["Testing", "Selenium", "Java"],
+      "references": [{ "name": "Tom", "contact": "tom@example.com" }]
+    }
+  },
+  {
+    "username": "ana_gomez",
+    "password": "12345678",
+    "displayName": "Ana Gómez",
+    "email": "ana@example.com",
+    "phoneNumber": "+5215512345678",
+    "currentLocation": "CDMX, México",
+    "openToNewOpportunities": false,
+    "profileIsPublic": false,
+    "theme_name": "minimal",
+    "profile": {
+      "experience": [{ "title": "Backend Dev", "company": "CodeMx", "years": 5 }],
+      "education": [{ "degree": "CS", "institution": "UNAM" }],
+      "projects": [{ "name": "Microservicios", "stack": ["Node.js", "Docker"] }],
+      "skills": ["Node.js", "Express", "Docker"],
+      "references": [{ "name": "Luis", "contact": "luis@example.com" }]
+    }
+  },
+  {
+    "username": "peterp",
+    "password": "spidey2025",
+    "displayName": "Peter Parker",
+    "email": "peter@example.com",
+    "phoneNumber": "+16171234567",
+    "currentLocation": "Queens, NYC",
+    "openToNewOpportunities": true,
+    "profileIsPublic": true,
+    "theme_name": "web-slinger",
+    "profile": {
+      "experience": [{ "title": "Photographer", "company": "Daily Bugle", "years": 6 }],
+      "education": [{ "degree": "Physics", "institution": "Empire State University" }],
+      "projects": [{ "name": "Spidey Tracker", "stack": ["React", "MongoDB"] }],
+      "skills": ["Photography", "React", "MongoDB"],
+      "references": [{ "name": "MJ", "contact": "mj@example.com" }]
+    }
+  }
+]
