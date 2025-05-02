@@ -1,11 +1,41 @@
-GET http://localhost:8080/contacts HTTP/1.1
+GET http://localhost:8080 HTTP/1.1
 
 ###
-GET http://localhost:8080/contacts/68097c1a5ea5f237197b82d8 HTTP/1.1
+GET http://localhost:8080/68097c1a5ea5f237197b82d8 HTTP/1.1
 
 ###
 
-GET http://localhost:8080/contacts/68097c1a5ea5f237197b82d9 HTTP/1.1
+GET http://localhost:8080/68097c1a5ea5f237197b82d9 HTTP/1.1
 
 ###
-GET http://localhost:8080/contacts/68097c1a5ea5f237197b82da HTTP/1.1
+GET http://localhost:8080/68097c1a5ea5f237197b82da HTTP/1.1
+
+###
+POST http://localhost:8080 HTTP/1.1
+Content-Type: application/json
+
+ {
+    "firstName": "aaaaaaaaaaa",
+    "lastName": "Rojas",
+    "email": "valerojas@gmail.com",
+    "favoriteColor": "negro",
+    "birthday": "11/11/2009" 
+}
+
+###
+PUT http://localhost:8080/680d52462dba271123b52b67 HTTP/1.1
+Content-Type: application/json
+
+ {
+    "firstName": "xxxxxxxxxx ",
+    "lastName": "Rojas",
+    "email": "valerojas@gmail.com",
+    "favoriteColor": "negro",
+    "birthday": "11/11/2009" 
+}
+
+###
+DELETE http://localhost:8080/680d583f2dba271123b52b68 HTTP/1.1
+
+###
+GET http://localhost:8080/64b0a912e5e4f8c1f4887d1b

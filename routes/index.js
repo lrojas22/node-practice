@@ -3,10 +3,15 @@ const router = require('express').Router();
 const studentRoute = require('../controllers/contacts.js');
 
 
-router.get('/contacts', studentRoute.getAllContacts);
+router.get('/', studentRoute.getAllContacts);
 
-router.get('/contacts/:id',studentRoute.getContactsById);
+router.get('/:id',studentRoute.getContactsById);
 
+router.post('/', studentRoute.createContact);
+
+router.put('/:id', studentRoute.updateContact);
+
+router.delete('/:id', studentRoute.deleteContact);
 
 
 module.exports = router;
