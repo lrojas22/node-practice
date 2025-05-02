@@ -1,33 +1,27 @@
 [
     {
-    "user": "user1",
-    "password": "123456",
-    
-},
-{
-    "user": "user2",
-    "password": "123456",
-    
-},
-{
-    "user": "user3",
-    "password": "123456",
-    
-},
-{
-    "user": "user4",
-    "password": "123456",
-    
-},
-{
-    "user": "user5",
-    "password": "123456",
-    
-},
-{
-    "user": "user6",
-    "password": "123456",
-    
-},
-
-]
+      "user": "user1",
+      "password": "123456"
+    },
+    {
+      "user": "user2",
+      "password": "123456"
+    },
+    {
+      "user": "user3",
+      "password": "123456"
+    },
+    {
+      "user": "user4",
+      "password": "123456"
+    },
+    {
+      "user": "user5",
+      "password": "123456"
+    },
+    {
+      "user": "user6",
+      "password": "123456"
+    }
+  ]
+  
