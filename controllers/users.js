@@ -47,7 +47,11 @@ const createUser = async(req, res) => {
   //validar password antes de continuar
   const validationResult = passwordPass(password)
   if (validationResult.error) {
-    return res.status(400).json({ error: validationResult.error.details[0].message})
+    return res.status(400).json({
+      message: 'Password does not meet complexity requirements',
+       details:validationResult.error.details
+      
+      });
   }
 
   const user = {
