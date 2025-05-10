@@ -5,10 +5,10 @@
     "description": "Temple API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "node-practice-6a1p.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/users": {
