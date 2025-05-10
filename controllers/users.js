@@ -43,7 +43,7 @@ const getUserById = async (req, res, next) => {
 
 
 const createUser = async(req, res) => {
-  const {password} = req.body.password;
+  const {password} = req.body;
   //validar password antes de continuar
   const validationResult = passwordUtil.passwordPass(password)
   if (validationResult.error) {
