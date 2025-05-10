@@ -4,6 +4,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+
     "start": "node app.js",
     "start-prod": "node app.js",
     "swagger-autogen": "node swagger.js"
@@ -15,8 +16,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "express-validator": "^7.2.1",
+    "express": "^5.1.0",   
+    "express-validator": "^7.2.1",  
     "joi": "^17.13.3",
     "joi-password-complexity": "^5.2.0",
     "mongodb": "^6.16.0",
