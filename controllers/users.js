@@ -1,5 +1,7 @@
+const { body } = require('express-validator');
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
+const passwordUtil = require('../util/passwordComplexityCheck')
 
 const getUsers = async (req, res, next) => {
   const result = await mongodb.getDb().db('Learning').collection('users').find();
@@ -41,9 +43,16 @@ const getUserById = async (req, res, next) => {
 
 
 const createUser = async(req, res) => {
+  const {password} = req.body;
+  //validar password antes de continuar
+  const validationResult = passwordPass(password)
+  if (validationResult.error) {
+    return res.status(400).json({ error: validationResult.error.details[0].message})
+  }
+
   const user = {
     username: req.body.username,
-    password: req.body.password,
+    password: password,
     displayName: req.body.displayName,
     email: req.body.email,
     phoneNumber: req.body.phoneNumber,

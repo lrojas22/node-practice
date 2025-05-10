@@ -35,9 +35,6 @@
                 "username": {
                   "example": "any"
                 },
-                "password": {
-                  "example": "any"
-                },
                 "displayName": {
                   "example": "any"
                 },
@@ -61,6 +58,9 @@
                 },
                 "profile": {
                   "example": "any"
+                },
+                "password": {
+                  "example": "any"
                 }
               }
             }
@@ -69,6 +69,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
