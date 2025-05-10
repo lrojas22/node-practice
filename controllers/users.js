@@ -86,10 +86,23 @@ const createUser = async(req, res) => {
 
 
 const updateUser = async(req,res) => {
+
+  const {password} = req.body;
+  //validar password antes de continuar
+  const validationResult = passwordUtil.passwordPass(password)
+  if (validationResult.error) {
+    return res.status(400).json({
+      message: 'Password does not meet complexity requirements',
+       details:validationResult.error.details
+      
+      });
+  }
+
+
   const userId = new ObjectId(req.params.id);
   const user = {
     username: req.body.username,
-    password: req.body.password,
+    password: password,
     displayName: req.body.displayName,
     email: req.body.email,
     phoneNumber: req.body.phoneNumber,
