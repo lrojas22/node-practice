@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 var cors = require('cors');
 const app = express();
 const mongodb = require('./db/connect');
-const {graphqlHTTP} = require('express-graphql');
-const schema = require('./graphql/schema.js')
+/*const {graphqlHTTP} = require('express-graphql');
+const schema = require('./graphql/schema.js')*/
 
 const userRoute = require('./routes/users.js')
 const themeRoute = require('./routes/theme.js')
@@ -23,11 +23,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/', userRoute);
 app.use('/', themeRoute);
-
+/*
 app.use('/graphql', graphqlHTTP({
   schema,
   graphiql: true // Interfaz gráfica activada en /graphql
-}));
+}));*/
 
 mongodb.initDb((err) => {
   if (err) {
